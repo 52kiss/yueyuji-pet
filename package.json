@@ -1,0 +1,29 @@
+{
+  "name": "dsh-yueyuji-pet",
+  "version": "0.1.0",
+  "description": "月御姬桌宠：为 DeepSeek Harness 的 dsh-dafeiyu 底座提供角色素材与定制补丁（微信有人找你提醒、余额阈值、空闲心跳）",
+  "private": true,
+  "type": "module",
+  "files": [
+    "assets",
+    "patches",
+    "tools",
+    "docs"
+  ],
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "desktop-pet",
+    "yueyuji"
+  ],
+  "peerDependencies": {
+    "dsh-dafeiyu": "0.1.23"
+  },
+  "scripts": {
+    "apply": "powershell -ExecutionPolicy Bypass -File tools/apply.ps1",
+    "verify": "powershell -ExecutionPolicy Bypass -File tools/verify.ps1",
+    "revert": "powershell -ExecutionPolicy Bypass -File tools/apply.ps1 -Revert"
+  },
+  "license": "MIT"
+}
